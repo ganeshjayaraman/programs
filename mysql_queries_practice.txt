@@ -1,0 +1,13 @@
+1. To get all table names from database and their size in mb
+
+select table_name, ROUND(data_length + index_length)/1024 / 1024 as size from information_schema.tables where table_schema like 'movies' order by (data_length + index_length) desc;
+
+
+2. update students.student set name = concat(lower(substring(name,1,1)), substring(name,2));
+
+
+3. To select the duplicate element having same mark as that of other. 
+
+select id from students.student where m2 = (select m2 from students.student group by m2 having count(*) > 1) limit 1,1;
+
+

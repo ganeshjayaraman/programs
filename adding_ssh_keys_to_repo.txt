@@ -1,0 +1,16 @@
+
+
+ls -al ~/.ssh    // This will check whether ssh keys exist.
+
+Switch to the directory for cloning into the github repo.
+
+eval "$(ssh-agent -s)"  // It will start the ssh process.
+
+ssh-add ~/.ssh/id_rsa // This will set the private key into the directory
+
+xclip -sel clip < ~/.ssh/id_rsa.pub // This will copy the public key into clipboard so that u can paste it
+
+
+
+
+
